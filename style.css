@@ -3,6 +3,12 @@
 body {
     font-family: 'Cabin';
     background-color: #758190;
+    overflow-x: hidden;
+}
+
+:root {
+    --transition: all 200ms ease-in;
+    --primary: rgb(20, 196, 255);
 }
 
 #tentacles {
@@ -21,6 +27,15 @@ body {
 
 .stats-container {
     display: flex;
+    position: relative;
+    display: flexbox;
+    align-items: center;
+    
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -57,9 +72,23 @@ body {
     border-radius: 7px;
 }
 
+
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+}
+
+.game-name {
+    margin-top: .5rem;
+    font-weight: 500;
+}
+
+.game-description {
+    margin: .75rem 0;
+}
+
+.game-backers {
+    margin-bottom: .75rem;
 }
 
 #button-container {
@@ -72,4 +101,50 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+#searchbar {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+
+}
+
+#searchbar:focus {
+    box-shadow: 0 0 30px  lightblue;
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 1rem .75rem;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition)
+}
+
+.btn:hover {
+    background: rgb(107, 218, 255);
+}
+
+.btn-active {
+    background: var(--primary);
+
+}
+.btn-outline {
+    border: 1px solid rgb(20, 196, 255);
+    background: transparent;
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    color: white;
 }

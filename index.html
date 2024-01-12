@@ -49,11 +49,15 @@
 
     <!-- list of games funded by Sea Monster -->
     <h2>Our Games</h2>
+    <form >
+        <input id = "searchbar" type="text" placeholder="Search For A Game">
+    </form>
     <p>Check out each of our games below!</p>
     <div id="button-container">
-        <button id="unfunded-btn">Show Unfunded Only</button>
-        <button id="funded-btn">Show Funded Only</button>
-        <button id="all-btn">Show All Games</button>
+        <button id="all-btn" class="btn  btn-active">Show All Games</button>
+
+        <button id="unfunded-btn" class="btn btn-outline">Show Unfunded Only</button>
+        <button id="funded-btn" class="btn btn-outline">Show Funded Only</button>
     </div>
     <div id="games-container">
 
